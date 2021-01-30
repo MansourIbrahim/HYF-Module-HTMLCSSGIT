@@ -1,5 +1,4 @@
-html,
-body {
+* {
   padding: 0;
   margin: 0;
 }
@@ -8,10 +7,60 @@ body {
   background-color: rgba(240, 235, 235, 0.99);
 }
 
-.container {
-  margin: auto;
-  width: 1070px;
+h1 {
+  color: #e9e9e9;
+  text-align: center;
+  font-size: 3em;
+  margin: 20px 15px;
+  padding: 20px 15px;
+  font-family: 'Hachi Maru Pop', cursive;
+}
 
+h2, h3 {
+  margin: 5px 5px 5px 0;
+  padding: 5px 5px 5px 0;
+  color: #f86f49;
+  font-size: 25px;
+  text-transform: capitalize;
+  font-family: 'Dancing Script', cursive;
+}
+
+h4 {
+  margin: 7px 5px 2px 0;
+  padding: 7px 5px 2px 0;
+  font-size: 20px;
+  color: #e9e9e9;
+  font-family: 'Indie Flower', cursive;
+}
+
+p {
+  color: #baa7a7;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+p:hover,
+h3:hover {
+  color: azure;
+  transform: scale(1.03);
+}
+
+ul {
+  padding-left: 15px;
+}
+
+li {
+  color: #baa7a7;
+  font-family: 'Big Shoulders Display', cursive;
+
+}
+
+.title-column{
+  display:none;
+}
+
+.container {
+  margin:0 auto;
+  max-width: 1070px;
   overflow: hidden;
 }
 
@@ -24,9 +73,10 @@ body {
   display: flex;
 }
 
+/*Start left-side*/
+
 .left-side {
   width: 35%;
-
   background-color: #6b5152;
 }
 
@@ -47,36 +97,22 @@ body {
 .contact-me,
 .soft-skills,
 .Courses {
-  padding-left: 30px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+margin: 10px;
+padding: 15px;
 }
 
-h3 {
-  color: #f86f49;
-  font-size: 25px;
-  text-transform: capitalize;
-}
+
 h3 i {
   color: rgb(194, 186, 186);
-  font-size: 350px;
 }
 
-p {
-  color: #baa7a7;
-}
 
-ul {
-  padding-left: 15px;
-}
+/*End left-side*/
 
-li {
-  color: #baa7a7;
-}
+/*Start right-side*/
 
 .right-side {
   width: 65%;
-
   background-color: #3b3b3b;
 }
 
@@ -85,22 +121,18 @@ li {
   padding-right: 20px;
 }
 
-h1 {
-  color: #e9e9e9;
-  text-align: center;
-  font-size: 60px;
+.right-container h3{
+  margin: 20px 10px 2px 0;
+  padding: 20px 10px 2px 0;
 }
-.disc {
+
+.description {
   text-align: center;
 }
 
-h4 {
-  font-size: 20px;
-  color: #e9e9e9;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
+/*End right-side*/
 
+/*Start footer*/
 .footer {
   height: 60px;
   background-color: #ff7952;
@@ -109,16 +141,58 @@ h4 {
   justify-content: center;
   color: #130218;
 }
+
 .footer i {
   margin: auto;
 }
+
 .footer i:hover,
 h3 i:hover {
   color: rgb(17, 146, 38);
   transform: scale(1.3);
 }
-p:hover,
-h3:hover {
-  color: azure;
-  transform: scale(1.03);
+
+/*End footer*/
+
+
+@media screen and (max-width: 1024px){
+
+  .title-row{
+    display:none;
+  }
+
+  .title-column{
+    display:contents;
+  }
+
+  .main-resume{
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .right-side {
+    width: 100%;
+    background-color: #6b5152;
+  }
+
+  .right-container{
+    margin: 10px auto;
+    width: 70%;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .summary,
+.contact-me,
+.soft-skills,
+.Courses {
+margin: 10px auto;
+width: 70%;
 }
+
+}
+
+
+
